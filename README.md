@@ -16,7 +16,10 @@ infrastructure. One markdown file.
 
 ## Demo
 
-<!-- TODO: replace this transcript with docs/demo.gif once recorded -->
+![stuntdouble demo](docs/demo.gif)
+
+<details>
+<summary>Text version of the demo</summary>
 
 ```
 > /stuntdouble on
@@ -39,6 +42,8 @@ JS interactions    → sonnet  (19.1k tokens)
 verification       → fable   (fixed: 13 issues)
 Est. savings vs. shooting everything with the star: ~40%
 ```
+
+</details>
 
 ## Receipts 🧾
 
