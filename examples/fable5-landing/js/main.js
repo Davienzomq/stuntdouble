@@ -99,7 +99,7 @@
 
     function animateCounter(el, target) {
       if (prefersReducedMotion) {
-        el.textContent = Number(target).toLocaleString('pt-BR');
+        el.textContent = Number(target).toLocaleString('en-US');
         return;
       }
 
@@ -109,13 +109,13 @@
         const elapsed = now - startTime;
         const progress = Math.min(elapsed / DURATION, 1);
         const value = Math.round(easeOutCubic(progress) * target);
-        el.textContent = Number(value).toLocaleString('pt-BR');
+        el.textContent = Number(value).toLocaleString('en-US');
 
         if (progress < 1) {
           requestAnimationFrame(tick);
         } else {
           // Ensure we land exactly on the target
-          el.textContent = Number(target).toLocaleString('pt-BR');
+          el.textContent = Number(target).toLocaleString('en-US');
         }
       }
 

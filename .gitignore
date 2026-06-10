@@ -1,3 +1,7 @@
+# Local-only docs (not part of the public skill)
+/PLAN.md
+/CLAUDE.md
+
 # Old demo location (moved to examples/, original locked by a process)
 /fable5-landing/
 
