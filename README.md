@@ -14,11 +14,48 @@ the host's own lineup — Claude models inside Claude Code, OpenAI models inside
 Codex, Gemini models inside Gemini CLI. No proxy, no API keys, no
 infrastructure. One markdown file.
 
-**Real test, receipts included:** we built a full premium landing page with it
-— HTML on haiku, CSS + JS on sonnet, final verification on the frontier model.
-Estimated ~40% cheaper than shooting everything with the star, and the verifier
-caught **13 integration bugs** the doubles left behind. The result is in
-[`examples/`](examples/).
+## Demo
+
+<!-- TODO: replace this transcript with docs/demo.gif once recorded -->
+
+```
+> /stuntdouble on
+
+🎬 stuntdouble ON — the star only shoots the close-ups
+Host: Claude Code · Doubles: haiku, sonnet · Star: fable
+
+> build me a super modern landing page for the new Fable 5 model
+
+Plan:
+  HTML structure + copy   → haiku   (double)
+  CSS design system       → sonnet  (double)
+  JS canvas + interactions→ sonnet  (double)
+  final close-up          → fable   (star)
+
+🎬 That's a wrap — orchestrated across 3 models
+HTML + copy        → haiku   (20.5k tokens)
+CSS (1,073 lines)  → sonnet  (24.8k tokens)
+JS interactions    → sonnet  (19.1k tokens)
+verification       → fable   (fixed: 13 issues)
+Est. savings vs. shooting everything with the star: ~40%
+```
+
+## Receipts 🧾
+
+This isn't a synthetic benchmark — the repo includes a real build produced by the skill.
+
+| Part | Model | Tokens |
+|---|---|---|
+| HTML structure + copy | haiku | 20.5k |
+| CSS design system (1,073 lines) | sonnet | 24.8k |
+| JS (canvas particles, scroll reveal, tilt) | sonnet | 19.1k |
+| Final verification | frontier star | 86k |
+
+The verifier caught **13 integration bugs** the doubles left behind. Three vivid examples: a doubled `requestAnimationFrame` loop burning 2x CPU (the init path and an observer callback each started the chain); mouse parallax that could never fire because the canvas had `pointer-events: none`; a mobile breakpoint that hid the entire nav links container — CTA button included.
+
+~40% estimated savings vs. running everything on the frontier model, based on input-price ratios — savings vary by task; measure yours with `/cost`.
+
+The result is in [`examples/fable5-landing`](examples/fable5-landing) — open `index.html` and judge the doubles' work yourself.
 
 ## Two modes
 
