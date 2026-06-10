@@ -4,6 +4,15 @@ Reference catalog used by the `stuntdouble` skill. Community-maintained —
 PRs welcome when providers ship new models. Prices change often; always check
 the provider's pricing page before relying on exact numbers.
 
+## Orchestration dispatch per host
+
+| Host | How workers are spawned |
+|---|---|
+| Claude Code | Agent/Task tool with `model` parameter (`haiku`/`sonnet`/`opus`/`fable`) |
+| Codex (OpenAI) | `codex exec -m <model> "<prompt>"` child runs (check `codex exec --help`) |
+| Gemini CLI | `gemini -m <model> -p "<prompt>"` child runs (check `gemini --help`) |
+| Other | Phase mode: plan parts, recommend `/model` switch per phase |
+
 ## Anthropic (Claude)
 
 | Model | Tier | Cost | Best for | Notes |

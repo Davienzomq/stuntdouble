@@ -7,10 +7,12 @@ action scenes, the star shows up for the close-up. Same movie, fraction of the
 cost, and the audience can't tell.
 
 **stuntdouble** does this with AI models. It's an open source agent skill for
-Claude Code: every task gets scored and routed to the cheapest capable model
-(the doubles), and the strongest model only enters at the end — to verify and
-polish (the close-up). No proxy, no API keys, no infrastructure. One markdown
-file.
+Claude Code, Codex, Gemini CLI and other agents: every task gets scored and
+routed to the cheapest capable model (the doubles), and the strongest model
+only enters at the end — to verify and polish (the close-up). It always uses
+the host's own lineup — Claude models inside Claude Code, OpenAI models inside
+Codex, Gemini models inside Gemini CLI. No proxy, no API keys, no
+infrastructure. One markdown file.
 
 **Real test, receipts included:** we built a full premium landing page with it
 — HTML on haiku, CSS + JS on sonnet, final verification on the frontier model.
@@ -126,10 +128,14 @@ Restart your Claude Code session, then run `/stuntdouble on`.
 
 - The skill never runs `/model` for you — that's a user-level CLI command. In
   advisor mode it hands you the command ready to copy.
-- Subagent dispatch (orchestrator mode) uses Claude Code's native per-agent
-  `model` parameter — Claude models only. For OpenAI/Gemini the skill works in
-  advisor mode (recommendations).
-- Orchestration is skipped for small/atomic tasks: subagent overhead would cost
+- Worker dispatch is host-aware: native subagents with a per-agent `model`
+  parameter in Claude Code; child `codex exec -m <model>` runs in Codex; child
+  `gemini -m <model>` runs in Gemini CLI. Hosts with neither fall back to
+  "phase mode" (the skill plans the parts and recommends a model switch per
+  phase).
+- The skill only ever names models from the host's own provider — no Claude
+  model names inside Codex, no OpenAI names inside Claude Code.
+- Orchestration is skipped for small/atomic tasks: worker overhead would cost
   more than it saves.
 - Savings are estimates based on price ratios; measure for real with `/cost`.
 
