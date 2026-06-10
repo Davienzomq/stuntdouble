@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fable 5 — O novo modelo de fronteira da Anthropic</title>
+    <meta name="description" content="Fable 5: o modelo de fronteira mais avançado da Anthropic. Raciocínio de ponta, agentes autônomos, programação profunda. Janela de contexto de 1M tokens [1m].">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__logo">
+                Fable <span class="gradient-text">5</span>
+            </div>
+            <div class="nav__links">
+                <a href="#capabilities">Capacidades</a>
+                <a href="#benchmarks">Benchmarks</a>
+                <a href="#context">Contexto</a>
+                <a href="#pricing">Preços</a>
+                <a href="#faq">FAQ</a>
+                <a class="btn btn--primary nav__cta" href="#pricing">Começar agora</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero__content">
+            <div class="container">
+                <div class="hero__badge reveal">Novo · claude-fable-5</div>
+                <h1 class="hero__title reveal">
+                    O modelo de <span class="gradient-text">fronteira</span> da Anthropic
+                </h1>
+                <p class="hero__subtitle reveal">
+                    Raciocínio de ponta, agentes de longa duração e programação em nível profundo. Tudo em um modelo.
+                </p>
+                <div class="hero__cta-row reveal">
+                    <a class="btn btn--primary" href="#pricing">Testar no Claude Code</a>
+                    <a class="btn btn--ghost" href="#pricing">Ver a API</a>
+                </div>
+                <div class="hero__stats reveal">
+                    <div class="stat">
+                        <span class="stat__number" data-target="1000000">0</span>
+                        <span class="stat__label">tokens de contexto na variante [1m]</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number" data-target="5">0</span>
+                        <span class="stat__label">quinta geração de modelos Claude</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number" data-target="99">0</span>
+                        <span class="stat__label">% das tarefas agênticas do dia a dia cobertas — ilustrativo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="capabilities" class="section">
+        <div class="container">
+            <h2 class="section__title reveal">Capacidades principais</h2>
+            <p class="section__subtitle reveal">Tudo que você precisa para trabalho agêntico profundo</p>
+            <div class="cards-grid">
+                <div class="card reveal" data-tilt>
+                    <div class="card__icon">🧠</div>
+                    <h3 class="card__title">Raciocínio de fronteira</h3>
+                    <p class="card__text">Resolve problemas complexos com análise profunda e validação contínua de hipóteses.</p>
+                </div>
+                <div class="card reveal" data-tilt>
+                    <div class="card__icon">⚙️</div>
+                    <h3 class="card__title">Agentes de longa duração</h3>
+                    <p class="card__text">Orquestra tarefas multietapas com planejamento autônomo e execução persistente.</p>
+                </div>
+                <div class="card reveal" data-tilt>
+                    <div class="card__icon">💻</div>
+                    <h3 class="card__title">Programação avançada</h3>
+                    <p class="card__text">Debug profundo, refatoração, arquitetura. Entende contexto de repositórios inteiros.</p>
+                </div>
+                <div class="card reveal" data-tilt>
+                    <div class="card__icon">✨</div>
+                    <h3 class="card__title">Extended thinking</h3>
+                    <p class="card__text">Pensa antes de responder. Explora múltiplos caminhos para entregar respostas refinadas.</p>
+                </div>
+                <div class="card reveal" data-tilt>
+                    <div class="card__icon">📚</div>
+                    <h3 class="card__title">Contexto massivo [1m]</h3>
+                    <p class="card__text">1 milhão de tokens. Analise repositórios inteiros, horas de conversa, centenas de arquivos.</p>
+                </div>
+                <div class="card reveal" data-tilt>
+                    <div class="card__icon">🔒</div>
+                    <h3 class="card__title">Segurança e confiabilidade</h3>
+                    <p class="card__text">Treinado com rigor em segurança. Comportamento previsível e alinhado com intenções humanas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benchmarks" class="section">
+        <div class="container">
+            <h2 class="section__title reveal">Desempenho verificado</h2>
+            <p class="section__subtitle reveal">Líder em tarefas agênticas e engenharia de software</p>
+            <div class="benchmarks-list">
+                <div class="bench reveal">
+                    <div class="bench__label">
+                        <span>Tarefas agênticas</span>
+                        <span class="bench__value">92%</span>
+                    </div>
+                    <div class="bench__bar">
+                        <div class="bench__fill" style="--fill:92%"></div>
+                    </div>
+                </div>
+                <div class="bench reveal">
+                    <div class="bench__label">
+                        <span>Engenharia de software</span>
+                        <span class="bench__value">89%</span>
+                    </div>
+                    <div class="bench__bar">
+                        <div class="bench__fill" style="--fill:89%"></div>
+                    </div>
+                </div>
+                <div class="bench reveal">
+                    <div class="bench__label">
+                        <span>Raciocínio complexo</span>
+                        <span class="bench__value">94%</span>
+                    </div>
+                    <div class="bench__bar">
+                        <div class="bench__fill" style="--fill:94%"></div>
+                    </div>
+                </div>
+                <div class="bench reveal">
+                    <div class="bench__label">
+                        <span>Uso de ferramentas</span>
+                        <span class="bench__value">91%</span>
+                    </div>
+                    <div class="bench__bar">
+                        <div class="bench__fill" style="--fill:91%"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="disclaimer">Valores ilustrativos para fins de demonstração.</p>
+        </div>
+    </section>
+
+    <section id="context" class="section">
+        <div class="container">
+            <div class="split">
+                <div class="split__text">
+                    <h2 class="section__title reveal">Janela de contexto massiva [1m]</h2>
+                    <p class="reveal">
+                        1 milhão de tokens. Analise repositórios inteiros sem troca de contexto. Mantenha conversas que duram horas. Processe centenas de arquivos em paralelo. Entenda o sistema como um todo.
+                    </p>
+                </div>
+                <div class="split__visual context-visual reveal"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="thinking" class="section">
+        <div class="container">
+            <h2 class="section__title reveal">Extended thinking: raciocínio profundo</h2>
+            <p class="section__subtitle reveal">O modelo pensa antes de responder a problemas que exigem análise</p>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step__num">01</div>
+                    <h3 class="step__title">Pensa antes de responder</h3>
+                    <p class="step__text">O modelo processa o problema internamente, explorando abordagens diferentes antes de gerar a resposta.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step__num">02</div>
+                    <h3 class="step__title">Explora caminhos e valida hipóteses</h3>
+                    <p class="step__text">Testa múltiplas soluções, identifica armadilhas e refina o entendimento do problema continuamente.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step__num">03</div>
+                    <h3 class="step__title">Entrega a resposta refinada</h3>
+                    <p class="step__text">Apresenta conclusões sólidas com raciocínio verificado. Ideal para debug, arquitetura e problemas complexos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2 class="section__title reveal">Modelos e preços</h2>
+            <p class="section__subtitle reveal">Escolha o modelo que se encaixa no seu workflow</p>
+            <div class="pricing-grid">
+                <div class="price-card reveal">
+                    <div class="price-card__tier">Haiku 4.5</div>
+                    <div class="price-card__price">$<span class="price-card__amount">1</span><span>/MTok</span></div>
+                    <ul class="price-card__list">
+                        <li>Modelo rápido e eficiente</li>
+                        <li>200k tokens de contexto</li>
+                        <li>Ideal para tarefas simples</li>
+                        <li>API + Claude Code</li>
+                    </ul>
+                    <a class="btn btn--ghost" href="#pricing">Usar Haiku</a>
+                </div>
+                <div class="price-card price-card--featured reveal">
+                    <div class="price-card__badge">Mais popular</div>
+                    <div class="price-card__tier">Fable 5</div>
+                    <div class="price-card__price">$<span class="price-card__amount">15</span><span>/MTok</span></div>
+                    <ul class="price-card__list">
+                        <li>Modelo de fronteira</li>
+                        <li>200k tokens de contexto</li>
+                        <li>Raciocínio avançado</li>
+                        <li>Extended thinking incluído</li>
+                    </ul>
+                    <a class="btn btn--primary" href="#pricing">Começar com Fable 5</a>
+                </div>
+                <div class="price-card reveal">
+                    <div class="price-card__tier">Fable 5 [1m]</div>
+                    <div class="price-card__price">$<span class="price-card__amount">30</span><span>/MTok</span></div>
+                    <ul class="price-card__list">
+                        <li>Tudo do Fable 5</li>
+                        <li>1M tokens de contexto</li>
+                        <li>Análise de repositórios inteiros</li>
+                        <li>Melhor para agentes autônomos</li>
+                    </ul>
+                    <a class="btn btn--ghost" href="#pricing">Testar [1m]</a>
+                </div>
+            </div>
+            <p class="disclaimer">Preços ilustrativos. Consulte claude.com/pricing.</p>
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section__title reveal">Perguntas frequentes</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-item__q">O que é o Fable 5?</summary>
+                    <p class="faq-item__a">Fable 5 é o modelo de fronteira mais avançado da Anthropic. Focado em raciocínio profundo, trabalho agêntico de longa duração e programação em nível profissional. Oferece raciocínio de ponta e capacidades de extended thinking para problemas complexos.</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__q">Qual é a diferença entre Fable 5 e Opus 4.8?</summary>
+                    <p class="faq-item__a">Fable 5 é a próxima geração de raciocínio, com foco em agentes autônomos e programação avançada. Opus 4.8 continua sendo um modelo robusto de propósito geral. Fable 5 é melhor para tarefas que exigem análise profunda; Opus 4.8 é ideal para conversas gerais e processamento rápido.</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__q">O que é a variante [1m]?</summary>
+                    <p class="faq-item__a">[1m] refere-se à variante de 1 milhão de tokens do Fable 5. Permite trabalhar com repositórios inteiros, conversas longas e centenas de arquivos simultaneamente. Ideal para análise de código complexa e agentes de longa duração.</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__q">O que é extended thinking?</summary>
+                    <p class="faq-item__a">Extended thinking é uma capacidade que permite ao modelo pensar profundamente antes de responder. O modelo explora múltiplos caminhos, valida hipóteses e refina seu raciocínio. Perfeito para problemas complexos que exigem análise cuidadosa.</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__q">Como usar Fable 5 no Claude Code?</summary>
+                    <p class="faq-item__a">Use o comando <code>/model fable</code> para trocar para Fable 5 na conversa. Ou use a skill open source model-selector para seleção automática. Fable 5 está disponível no Claude Code CLI, web, IDE e versão desktop.</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__q">Esta página é oficial da Anthropic?</summary>
+                    <p class="faq-item__a">Não. Esta é uma página demo não-oficial criada com a skill open source model-selector. É uma vitrine de demonstração. Para informações oficiais, visite claude.com e api.anthropic.com.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <div>Fable <span class="gradient-text">5</span></div>
+                    <p class="footer__tagline">Página demo não-oficial criada com a skill open source model-selector</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#">GitHub</a>
+                    <a href="#">Claude Code</a>
+                    <a href="#">API Anthropic</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Old demo location (moved to examples/, original locked by a process)
+/fable5-landing/
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Node (if examples ever get a build step)
+node_modules/
