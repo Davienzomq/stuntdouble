@@ -76,26 +76,39 @@ Each task is scored on 4 weighted dimensions:
 Modifiers when relevant: extended thinking, reasoning effort, fast mode,
 1M-context variants.
 
-## Install (Claude Code)
+## Install
 
-Clone and copy the `stuntdouble/` folder into your skills directory:
+### One-liner (Claude Code)
+
+macOS / Linux / WSL:
 
 ```bash
-git clone https://github.com/Davienzomq/stuntdouble.git
-# personal (all projects)
-cp -r stuntdouble/stuntdouble ~/.claude/skills/
-# or per-project
-cp -r stuntdouble/stuntdouble .claude/skills/
+curl -fsSL https://raw.githubusercontent.com/Davienzomq/stuntdouble/main/install.sh | bash
 ```
 
 Windows (PowerShell):
 
 ```powershell
-git clone https://github.com/Davienzomq/stuntdouble.git
-Copy-Item -Recurse stuntdouble\stuntdouble "$env:USERPROFILE\.claude\skills\"
+irm https://raw.githubusercontent.com/Davienzomq/stuntdouble/main/install.ps1 | iex
 ```
 
-Restart your Claude Code session and you're done.
+### Via the skills CLI (Claude Code, Cursor, Codex + 40 more agents)
+
+```bash
+npx skills add Davienzomq/stuntdouble -g
+```
+
+### Manual
+
+```bash
+git clone https://github.com/Davienzomq/stuntdouble.git
+# personal (all projects)
+cp -r stuntdouble/skills/stuntdouble ~/.claude/skills/
+# or per-project
+cp -r stuntdouble/skills/stuntdouble .claude/skills/
+```
+
+Restart your Claude Code session, then run `/stuntdouble on`.
 
 ## Use
 
@@ -124,13 +137,13 @@ Restart your Claude Code session and you're done.
 
 The skill detects when you're talking about OpenAI (GPT/Codex) or Google
 (Gemini) and recommends from those catalogs. See
-[`stuntdouble/models.md`](stuntdouble/models.md) for the full catalog.
+[`skills/stuntdouble/models.md`](skills/stuntdouble/models.md) for the full catalog.
 
 ## Contributing
 
 Models change fast. To add or update a provider:
 
-1. Edit [`stuntdouble/models.md`](stuntdouble/models.md) — models, tiers, modifiers.
+1. Edit [`skills/stuntdouble/models.md`](skills/stuntdouble/models.md) — models, tiers, modifiers.
 2. Map the tiers in `SKILL.md`.
 3. Open a PR.
 
