@@ -158,5 +158,8 @@ Est. savings vs. shooting everything with the star: ~XX%
 - Never orchestrate the conversation itself — only concrete work tasks.
 - When in doubt between Direct and Orchestrate, prefer Direct: a wrong
   decomposition costs more than a slightly expensive model.
+- Tasks that need the orchestrator's own senses — viewing images, judging
+  visual output, iterating on renders — lean Direct even at mid scores: each
+  adjustment round-trip with a cold worker costs more than the work itself.
 - Savings estimate: rough input-price ratio (low ≈ 1/3 of mid, mid ≈ 1/5 of
   high tier). Label it as an estimate.
