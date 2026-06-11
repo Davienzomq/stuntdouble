@@ -6,6 +6,9 @@
 # Old demo location (moved to examples/, original locked by a process)
 /fable5-landing/
 
+# Hollywood Code fork (separate private repo, lives in this workspace only)
+/hollywood-code/
+
 # OS
 Thumbs.db
 desktop.ini
