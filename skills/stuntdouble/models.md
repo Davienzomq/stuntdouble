@@ -36,9 +36,15 @@ Pricing: https://claude.com/pricing
 
 | Model | Tier | Cost | Best for |
 |---|---|---|---|
-| `gpt-5.4-mini` | Low | $ | simple tasks, high-volume, drafts |
-| `gpt-5.5` | Mid–High | $$–$$$ | general coding and reasoning; scale reasoning effort up for hard problems |
-| `gpt-5.4-codex` | Mid | $$ | agentic coding (Codex CLI) |
+| `gpt-5.6-luna` | Low | $ | simple tasks, high-volume, drafts |
+| `gpt-5.6-terra` | Mid | $$ | general coding, refactors, day-to-day agent work |
+| `gpt-5.6-sol` | High | $$$ | frontier reasoning, architecture, critical decisions (`-pro` variant for max quality) |
+| `gpt-5.5` / `gpt-5.4-*` | (previous gen) | $–$$$ | still available; prefer the 5.6 tier names above |
+
+Naming note: the gpt-5.6 generation renamed the tiers — **luna** (small) / **terra**
+(mid) / **sol** (frontier), with optional `-fast` / `-pro` builds. If a newer
+generation exists when you read this, map the same roles by name — don't pin to
+version numbers.
 
 Modifier: **reasoning effort** (low/medium/high) — analogous to extended thinking.
 

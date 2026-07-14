@@ -43,7 +43,7 @@ is a failure.
 | Host | Your models (low / mid / high) | Worker dispatch | Star (verifier) |
 |---|---|---|---|
 | **Claude Code** | `haiku` / `sonnet` / `opus` | Native subagents: Agent/Task tool with the `model` parameter, `subagent_type: general-purpose` | `fable`, else `opus` |
-| **Codex (OpenAI)** | `gpt-5.4-mini` / `gpt-5.5` or `gpt-5.4-codex` / `gpt-5.5` high reasoning | Child runs via shell: `codex exec -m <model> "<subtask prompt>"` — run `codex exec --help` once first to confirm flags and sandbox options | `gpt-5.5` with high reasoning effort |
+| **Codex (OpenAI)** | `gpt-5.6-luna` / `gpt-5.6-terra` / `gpt-5.6-sol` high reasoning | Child runs via shell: `codex exec -m <model> "<subtask prompt>"` — run `codex exec --help` once first to confirm flags and sandbox options | `gpt-5.6-sol` with high reasoning effort |
 | **Gemini CLI** | `gemini-flash` / `gemini-pro` / `gemini-ultra` | Child runs via shell: `gemini -m <model> -p "<subtask prompt>"` (confirm flags with `--help` first) | `gemini-ultra` |
 | **Other / unknown** | infer the host's tiers from its docs or `models.md` | **Phase Mode** (see below) | strongest available |
 
